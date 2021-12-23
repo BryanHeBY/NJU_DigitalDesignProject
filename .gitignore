@@ -1,0 +1,11 @@
+*.*
+*
+!*/
+!/am_home/*
+!/am_kernel/*
+!/cpu_test/*
+!/hardware_src/*
+!makefile
+!.gitignore
+!README.md
+.vscode

@@ -1,0 +1,17 @@
+*
+!*/
+!*.v
+!*.vt
+!*.vh
+!*.hex
+!Makefile
+!makefile
+!README
+!README.md
+!LICENSE
+.*
+_*
+*~
+build/
+!.gitignore
+.vscode
