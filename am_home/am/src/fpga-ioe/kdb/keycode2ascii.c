@@ -54,7 +54,6 @@ char key_id2ascii[NR_KEY] = {
 };
 
 char key_id2ascii_shift[NR_KEY] = {
-    [_KEY_GRAVE] = '`',
     [_KEY_1] = '!',
     [_KEY_2] = '@',
     [_KEY_3] = '#',
