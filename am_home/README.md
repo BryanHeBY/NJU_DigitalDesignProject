@@ -135,7 +135,7 @@ AM的makefile位于(`./am_home/makefile`)
 >
 > > 选择构建目标，构建elf，生成mif文件还有直接更新到项目文件夹中
 > >
-> > **dummy(_d).mif** <\=\=objdump/objcopy\=\= ** dummy.elf**
+> > **dummy(_d).mif** <\=\=objdump/objcopy\=\= **dummy.elf**
 > >
 > > > **dummy.elf** <\==ld\== **\$OBJS(= dummy.o) \$LIBS(=am.a klib.a)**
 > > >
