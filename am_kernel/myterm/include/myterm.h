@@ -26,10 +26,10 @@ typedef struct {
         f(help) f(ls) f(echo) f(hello) f(time) f(fib) f(dry) f(type) f(eval)\
         FPGA_EXE_LIST(f)
 
-#define DECLEAR_EXE_FUNC(name) \
+#define DECLARE_EXE_FUNC(name) \
         int CONCAT(exe_, name) (int argc, char *argv[]);
 
-MAP(EXE_LIST, DECLEAR_EXE_FUNC);
+MAP(EXE_LIST, DECLARE_EXE_FUNC);
 
 char *readline();
 void welcome();
