@@ -170,9 +170,9 @@ default:
 例如，fib命令的执行函数声明为`int exe_fib(int argc, char *argv[]);`
 
 ```C
-#define DECLEAR_EXE_FUNC(name) \
+#define DECLARE_EXE_FUNC(name) \
         int CONCAT(exe_, name) (int argc, char *argv[]);
-MAP(EXE_LIST, DECLEAR_EXE_FUNC);
+MAP(EXE_LIST, DECLARE_EXE_FUNC);
 ```
 
 ##### 2. 对所有列表中的命令，依此赋给一个enum值。
