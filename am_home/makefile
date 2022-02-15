@@ -1,4 +1,4 @@
-ifeq ($(ARCH),native)
+ifneq ($(ARCH),fpga)
 
 -include $(AM_HOME)/Makefile
 
