@@ -11,7 +11,7 @@ int main() {
   nvboard_bind_all_pins(&dut);
   nvboard_init();
 
-  sleep(1);
+  sleep(1); //fix the sdl bug.
 
   while(1) {
     nvboard_update();
