@@ -1,0 +1,2 @@
+build/*
+!vga_font.hex
