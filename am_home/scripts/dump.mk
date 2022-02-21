@@ -34,6 +34,7 @@ CPU_NBD_RESOURCE_PATH = $(CPU_NBD_PATH)/resource/build
 dump_hex: ${EXEC}.hex
 
 update_nbd: dump_hex
+	@mkdir -p $(CPU_NBD_RESOURCE_PATH)
 	@echo "UPDATE" $(shell realpath $(EXEC).hex --relative-to .) $(shell realpath $(EXEC)_d.hex --relative-to .)
 	@cp $(EXEC).hex $(CPU_NBD_RESOURCE_PATH)/imem.hex
 	@cp $(EXEC)_d.hex $(CPU_NBD_RESOURCE_PATH)/dmem.hex
