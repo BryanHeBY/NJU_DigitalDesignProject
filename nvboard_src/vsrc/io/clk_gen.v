@@ -6,7 +6,7 @@ module clkgen (
 );
     
     parameter clk_freq = 1000;
-    parameter countlimit = 50000000/2/clk_freq;
+    parameter countlimit = `CLK_FREQ/2/clk_freq;
 
     reg [31:0] clkcount;
     always @(posedge clkin) begin
@@ -35,7 +35,7 @@ module clkcount (
 );
     
 parameter clk_freq = 1000;
-parameter countlimit = 50000000/clk_freq;
+parameter countlimit = `CLK_FREQ/clk_freq;
 
 reg [31:0] in_count;
 

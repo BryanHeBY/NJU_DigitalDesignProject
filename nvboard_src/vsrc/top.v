@@ -170,22 +170,19 @@ clkcount #(1) clk_s(
 );
 */
 
-clkcount #(/*1000000*/25000000) clk_us(
-    .clkin(CLOCK_50),
-    .clkcount(dmem_clks_out[0])
-);
+assign dmem_clks_out[0] = 1'd0;
 
-clkcount #(250000) clk_ms(
+clkcount #(1000) clk_ms(
     .clkin(CLOCK_50),
     .clkcount(dmem_clks_out[1])
 );
 
-clkcount #(2500) clk_ds(
+clkcount #(10) clk_ds(
     .clkin(CLOCK_50),
     .clkcount(dmem_clks_out[2])
 );
 
-clkcount #(250) clk_s(
+clkcount #(1) clk_s(
     .clkin(CLOCK_50),
     .clkcount(dmem_clks_out[3])
 );
@@ -225,7 +222,7 @@ wire [2:0] font_h;
 assign font_v = v_addr[3:0];
 assign font_h = h_addr[2:0];
 
-clkgen #(25000000) vga_clkgen(
+clkgen #(`CLK_FREQ/2) vga_clkgen(
     .clkin(CLOCK_50),
     .rst(1'b0),
     .clken(1'b1),

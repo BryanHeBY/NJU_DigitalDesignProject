@@ -1,12 +1,14 @@
-PWD ?= $(abspath .)
 TOPNAME = top
+PWD ?= $(abspath .)
+CLK_FREQ = 400000
+
 NXDC_FILES = constr/top.nxdc
 INC_PATH ?=
 
 VERILATOR = verilator
 VERILATOR_CFLAGS += --build -cc -Wno-fatal -Wno-lint \
 				-O3 --x-assign fast --x-initial fast --noassert \
-				-DPWD="\"$(PWD)\""
+				-DPWD="\"$(PWD)\"" -DCLK_FREQ=$(CLK_FREQ)
 
 BUILD_DIR = ./build
 OBJ_DIR = $(BUILD_DIR)/obj_dir
