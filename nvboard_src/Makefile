@@ -1,6 +1,6 @@
 TOPNAME = top
 PWD ?= $(abspath .)
-CLK_FREQ = 400000
+CLK_FREQ = 500000
 
 NXDC_FILES = constr/top.nxdc
 INC_PATH ?=
