@@ -15,6 +15,14 @@
 - 移植AM的打字小游戏与OSlab0小游戏，运行“来自未来的游戏”
 - **添加对NVBOARD(projectN虚拟开发板)的支持**
 
+## 运行方式
+
+1. 首先将repo中的am_home设置为$MYCPU_AM_HOME环境变量
+2. 安装相关工具
+    - riscv工具链(与projectN-ICS-PA相同)
+    - verilator (version >= v4.204)
+3. 若要在NVBOARD中运行am_kernal中的程序(例如myterm)，需要进入`am_kernel/myterm`目录，执行make ARCH=fpga run_nbd
+
 ## 工程目录结构
 
 ```SCSS
